@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zj.wifi_get.MainActivity">
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文件名"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="请输入要保存的文件名"
+        android:layout_alignBaseline="@+id/name1"
+        android:layout_alignBottom="@+id/name1"
+        android:layout_alignLeft="@+id/period"
+        android:layout_alignStart="@+id/period" />
+
+    <EditText
+        android:id="@+id/period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="请输入采集间隔"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toLeftOf="@+id/textView1"
+        android:layout_toStartOf="@+id/textView1"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/period1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name1"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="22dp"
+        android:text="采集间隔"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="毫秒"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignTop="@+id/period1" />
+
+    <TextView
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/period"
+        android:layout_marginTop="18dp"
+        android:text="位置号"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="请输入位置号"
+        android:layout_alignBaseline="@+id/number1"
+        android:layout_alignBottom="@+id/number1"
+        android:layout_alignLeft="@+id/period"
+        android:layout_alignStart="@+id/period" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="再某一位置上按下“开始”就开始测试，测试完后，按下“停止”；然后换到另一个位置开始测，以此类推，所有位置测完后，按下“保存”即可。注意这个顺序不能乱"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始"
+        android:layout_below="@+id/number"
+        android:layout_alignRight="@+id/period1"
+        android:layout_alignEnd="@+id/period1"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/start"
+        android:layout_alignBottom="@+id/start"
+        android:layout_alignRight="@+id/number"
+        android:text="保存" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止"
+        android:layout_alignBaseline="@+id/save"
+        android:layout_alignBottom="@+id/save"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/start"
+        android:layout_marginTop="67dp"
+        android:text="计数器"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/count_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBaseline="@+id/count"
+        android:layout_alignBottom="@+id/count"
+        android:layout_toLeftOf="@+id/stop"
+        android:layout_toStartOf="@+id/stop" />
+
+</RelativeLayout>
